@@ -16,5 +16,20 @@ namespace Gestión_de_CompraAutos
         {
             InitializeComponent();
         }
+
+        private void btnIngresar_Click(object sender, EventArgs e)
+        {
+            Usuarios u = new Usuarios(txtUsuario.Text, txtContrasenia.Text);
+            if (true)
+            {
+                Form form = new Form();
+                form.Visible = false;
+                this.Hide();
+            }
+            else
+            {
+                MessageBox.Show("Fallaste jajajaja");
+            }
+        }
     }
 }

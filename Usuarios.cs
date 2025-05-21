@@ -11,6 +11,7 @@ namespace Gestión_de_CompraAutos
         List<Usuarios> usuarios = new List<Usuarios>()
         {
             new Usuarios ("Cindy","4454"),
+            new Usuarios ("lalo","123")
         };
 
         public Usuarios(string user, string password)
