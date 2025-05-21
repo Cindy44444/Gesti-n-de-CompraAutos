@@ -8,5 +8,10 @@ namespace Gestión_de_CompraAutos
 {
     internal class Usuarios
     {
+        List<Usuarios> usuarios = new List<Usuarios>()
+        {
+            new Usuarios ("Cindy","4454"),
+        };
+
     }
 }

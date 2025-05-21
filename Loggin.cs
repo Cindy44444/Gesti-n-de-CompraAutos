@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace Gestión_de_CompraAutos
 {
-    public partial class Form2 : Form
+    public partial class Loggin : Form
     {
-        public Form2()
+        public Loggin()
         {
             InitializeComponent();
         }
