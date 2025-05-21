@@ -19,7 +19,17 @@ namespace Gestión_de_CompraAutos
             this.password = password;
         }
 
-        public List<Usuarios>
+        public List<Usuarios>GetUsuarios()
+        {
+            try
+            {
+                return usuarios;
+            }
+            catch (Exception)
+            {
+                throw;
+            }
+        }
 
         public string user {  get; set; }
        public string password { get; set; }
