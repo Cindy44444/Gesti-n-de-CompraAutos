@@ -98,5 +98,16 @@ namespace Gestión_de_CompraAutos
                 MessageBox.Show("No se pudo eliminar");
             }
         }
+
+        private void btnLimpiar_Click(object sender, EventArgs e)
+        {
+            txtID.Text = "";
+            txtMarca.Text = "";
+            txtModelo.Text = "";
+            txtAnio.Text = "";
+            txtColor.Text = "";
+            txtPrecio.Text = "";
+            txtEstado.Text = "";
+        }
     }
 }
