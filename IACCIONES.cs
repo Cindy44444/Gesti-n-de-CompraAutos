@@ -9,6 +9,10 @@ namespace Gestión_de_CompraAutos
     internal interface IACCIONES
     {
         List<auto> MostrarAuto();
-
+        bool Agregar(int id, string marca, string modelo, int anio, string color, double precio, string estado);
+        bool Actualizar(int id, string marca, string modelo, int anio, string color, double precio, string estado);
+        bool Eliminar(int id);
+        bool ExportarExcel();
+        bool ImportarExcel();
     }
 }
