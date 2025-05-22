@@ -51,7 +51,21 @@ namespace Gestión_de_CompraAutos
 
         public bool Eliminar(int id)
         {
-            throw new NotImplementedException();
+            try
+            {
+                var autoEliminar = LISTAAUTOS.FirstOrDefault(x => x.id == id);
+                if (autoEliminar != null)
+                {
+                    LISTAAUTOS.Remove(autoEliminar);
+                    return true;
+                }
+                return false;
+            }
+            catch(Exception ex)
+            {
+                correo.EnviarCorreo(ex.ToString());
+                return false;
+            }
         }
 
         public bool ExportarExcel()
