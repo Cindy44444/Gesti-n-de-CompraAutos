@@ -36,8 +36,20 @@
             this.txtMarca = new System.Windows.Forms.TextBox();
             this.lbModelo = new System.Windows.Forms.Label();
             this.txtModelo = new System.Windows.Forms.TextBox();
-            this.label1 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.lbAnio = new System.Windows.Forms.Label();
+            this.txtAnio = new System.Windows.Forms.TextBox();
+            this.lbColor = new System.Windows.Forms.Label();
+            this.txtColor = new System.Windows.Forms.TextBox();
+            this.lbPrecio = new System.Windows.Forms.Label();
+            this.lbEstado = new System.Windows.Forms.Label();
+            this.txtPrecio = new System.Windows.Forms.TextBox();
+            this.txtEstado = new System.Windows.Forms.TextBox();
+            this.btnAgregar = new System.Windows.Forms.Button();
+            this.btnActualizar = new System.Windows.Forms.Button();
+            this.btnEliminar = new System.Windows.Forms.Button();
+            this.btnLimpiar = new System.Windows.Forms.Button();
+            this.btnExportar = new System.Windows.Forms.Button();
+            this.btnImportar = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.GVAutos)).BeginInit();
             this.SuspendLayout();
             // 
@@ -60,7 +72,7 @@
             // 
             // txtID
             // 
-            this.txtID.Location = new System.Drawing.Point(38, 433);
+            this.txtID.Location = new System.Drawing.Point(18, 456);
             this.txtID.Name = "txtID";
             this.txtID.Size = new System.Drawing.Size(80, 20);
             this.txtID.TabIndex = 2;
@@ -68,7 +80,7 @@
             // lbID
             // 
             this.lbID.AutoSize = true;
-            this.lbID.Location = new System.Drawing.Point(35, 408);
+            this.lbID.Location = new System.Drawing.Point(15, 431);
             this.lbID.Name = "lbID";
             this.lbID.Size = new System.Drawing.Size(18, 13);
             this.lbID.TabIndex = 3;
@@ -77,7 +89,7 @@
             // lbMarca
             // 
             this.lbMarca.AutoSize = true;
-            this.lbMarca.Location = new System.Drawing.Point(144, 408);
+            this.lbMarca.Location = new System.Drawing.Point(124, 431);
             this.lbMarca.Name = "lbMarca";
             this.lbMarca.Size = new System.Drawing.Size(37, 13);
             this.lbMarca.TabIndex = 4;
@@ -85,7 +97,7 @@
             // 
             // txtMarca
             // 
-            this.txtMarca.Location = new System.Drawing.Point(147, 433);
+            this.txtMarca.Location = new System.Drawing.Point(127, 456);
             this.txtMarca.Name = "txtMarca";
             this.txtMarca.Size = new System.Drawing.Size(80, 20);
             this.txtMarca.TabIndex = 5;
@@ -93,7 +105,7 @@
             // lbModelo
             // 
             this.lbModelo.AutoSize = true;
-            this.lbModelo.Location = new System.Drawing.Point(248, 408);
+            this.lbModelo.Location = new System.Drawing.Point(228, 431);
             this.lbModelo.Name = "lbModelo";
             this.lbModelo.Size = new System.Drawing.Size(42, 13);
             this.lbModelo.TabIndex = 6;
@@ -101,34 +113,148 @@
             // 
             // txtModelo
             // 
-            this.txtModelo.Location = new System.Drawing.Point(251, 433);
+            this.txtModelo.Location = new System.Drawing.Point(231, 456);
             this.txtModelo.Name = "txtModelo";
             this.txtModelo.Size = new System.Drawing.Size(80, 20);
             this.txtModelo.TabIndex = 7;
             // 
-            // label1
+            // lbAnio
             // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(377, 408);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(42, 13);
-            this.label1.TabIndex = 8;
-            this.label1.Text = "Modelo";
+            this.lbAnio.AutoSize = true;
+            this.lbAnio.Location = new System.Drawing.Point(331, 431);
+            this.lbAnio.Name = "lbAnio";
+            this.lbAnio.Size = new System.Drawing.Size(26, 13);
+            this.lbAnio.TabIndex = 8;
+            this.lbAnio.Text = "Año";
             // 
-            // textBox1
+            // txtAnio
             // 
-            this.textBox1.Location = new System.Drawing.Point(380, 433);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(80, 20);
-            this.textBox1.TabIndex = 9;
+            this.txtAnio.Location = new System.Drawing.Point(334, 456);
+            this.txtAnio.Name = "txtAnio";
+            this.txtAnio.Size = new System.Drawing.Size(80, 20);
+            this.txtAnio.TabIndex = 9;
+            // 
+            // lbColor
+            // 
+            this.lbColor.AutoSize = true;
+            this.lbColor.Location = new System.Drawing.Point(441, 431);
+            this.lbColor.Name = "lbColor";
+            this.lbColor.Size = new System.Drawing.Size(31, 13);
+            this.lbColor.TabIndex = 10;
+            this.lbColor.Text = "Color";
+            // 
+            // txtColor
+            // 
+            this.txtColor.Location = new System.Drawing.Point(444, 456);
+            this.txtColor.Name = "txtColor";
+            this.txtColor.Size = new System.Drawing.Size(80, 20);
+            this.txtColor.TabIndex = 11;
+            // 
+            // lbPrecio
+            // 
+            this.lbPrecio.AutoSize = true;
+            this.lbPrecio.Location = new System.Drawing.Point(556, 431);
+            this.lbPrecio.Name = "lbPrecio";
+            this.lbPrecio.Size = new System.Drawing.Size(37, 13);
+            this.lbPrecio.TabIndex = 12;
+            this.lbPrecio.Text = "Precio";
+            // 
+            // lbEstado
+            // 
+            this.lbEstado.AutoSize = true;
+            this.lbEstado.Location = new System.Drawing.Point(666, 431);
+            this.lbEstado.Name = "lbEstado";
+            this.lbEstado.Size = new System.Drawing.Size(40, 13);
+            this.lbEstado.TabIndex = 13;
+            this.lbEstado.Text = "Estado";
+            // 
+            // txtPrecio
+            // 
+            this.txtPrecio.Location = new System.Drawing.Point(559, 456);
+            this.txtPrecio.Name = "txtPrecio";
+            this.txtPrecio.Size = new System.Drawing.Size(80, 20);
+            this.txtPrecio.TabIndex = 14;
+            // 
+            // txtEstado
+            // 
+            this.txtEstado.Location = new System.Drawing.Point(669, 456);
+            this.txtEstado.Name = "txtEstado";
+            this.txtEstado.Size = new System.Drawing.Size(80, 20);
+            this.txtEstado.TabIndex = 15;
+            // 
+            // btnAgregar
+            // 
+            this.btnAgregar.Location = new System.Drawing.Point(18, 501);
+            this.btnAgregar.Name = "btnAgregar";
+            this.btnAgregar.Size = new System.Drawing.Size(92, 32);
+            this.btnAgregar.TabIndex = 16;
+            this.btnAgregar.Text = "Agregar";
+            this.btnAgregar.UseVisualStyleBackColor = true;
+            // 
+            // btnActualizar
+            // 
+            this.btnActualizar.Location = new System.Drawing.Point(18, 539);
+            this.btnActualizar.Name = "btnActualizar";
+            this.btnActualizar.Size = new System.Drawing.Size(92, 32);
+            this.btnActualizar.TabIndex = 17;
+            this.btnActualizar.Text = "Actualizar";
+            this.btnActualizar.UseVisualStyleBackColor = true;
+            // 
+            // btnEliminar
+            // 
+            this.btnEliminar.Location = new System.Drawing.Point(18, 577);
+            this.btnEliminar.Name = "btnEliminar";
+            this.btnEliminar.Size = new System.Drawing.Size(92, 32);
+            this.btnEliminar.TabIndex = 18;
+            this.btnEliminar.Text = "Eliminar";
+            this.btnEliminar.UseVisualStyleBackColor = true;
+            // 
+            // btnLimpiar
+            // 
+            this.btnLimpiar.Location = new System.Drawing.Point(18, 615);
+            this.btnLimpiar.Name = "btnLimpiar";
+            this.btnLimpiar.Size = new System.Drawing.Size(92, 32);
+            this.btnLimpiar.TabIndex = 19;
+            this.btnLimpiar.Text = "Limpiar";
+            this.btnLimpiar.UseVisualStyleBackColor = true;
+            // 
+            // btnExportar
+            // 
+            this.btnExportar.Location = new System.Drawing.Point(657, 501);
+            this.btnExportar.Name = "btnExportar";
+            this.btnExportar.Size = new System.Drawing.Size(92, 32);
+            this.btnExportar.TabIndex = 20;
+            this.btnExportar.Text = "Exportar";
+            this.btnExportar.UseVisualStyleBackColor = true;
+            // 
+            // btnImportar
+            // 
+            this.btnImportar.Location = new System.Drawing.Point(657, 539);
+            this.btnImportar.Name = "btnImportar";
+            this.btnImportar.Size = new System.Drawing.Size(92, 32);
+            this.btnImportar.TabIndex = 21;
+            this.btnImportar.Text = "Importar";
+            this.btnImportar.UseVisualStyleBackColor = true;
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1486, 671);
-            this.Controls.Add(this.textBox1);
-            this.Controls.Add(this.label1);
+            this.Controls.Add(this.btnImportar);
+            this.Controls.Add(this.btnExportar);
+            this.Controls.Add(this.btnLimpiar);
+            this.Controls.Add(this.btnEliminar);
+            this.Controls.Add(this.btnActualizar);
+            this.Controls.Add(this.btnAgregar);
+            this.Controls.Add(this.txtEstado);
+            this.Controls.Add(this.txtPrecio);
+            this.Controls.Add(this.lbEstado);
+            this.Controls.Add(this.lbPrecio);
+            this.Controls.Add(this.txtColor);
+            this.Controls.Add(this.lbColor);
+            this.Controls.Add(this.txtAnio);
+            this.Controls.Add(this.lbAnio);
             this.Controls.Add(this.txtModelo);
             this.Controls.Add(this.lbModelo);
             this.Controls.Add(this.txtMarca);
@@ -155,8 +281,20 @@
         private System.Windows.Forms.TextBox txtMarca;
         private System.Windows.Forms.Label lbModelo;
         private System.Windows.Forms.TextBox txtModelo;
-        private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.Label lbAnio;
+        private System.Windows.Forms.TextBox txtAnio;
+        private System.Windows.Forms.Label lbColor;
+        private System.Windows.Forms.TextBox txtColor;
+        private System.Windows.Forms.Label lbPrecio;
+        private System.Windows.Forms.Label lbEstado;
+        private System.Windows.Forms.TextBox txtPrecio;
+        private System.Windows.Forms.TextBox txtEstado;
+        private System.Windows.Forms.Button btnAgregar;
+        private System.Windows.Forms.Button btnActualizar;
+        private System.Windows.Forms.Button btnEliminar;
+        private System.Windows.Forms.Button btnLimpiar;
+        private System.Windows.Forms.Button btnExportar;
+        private System.Windows.Forms.Button btnImportar;
     }
 }
 
