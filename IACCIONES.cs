@@ -8,5 +8,7 @@ namespace Gestión_de_CompraAutos
 {
     internal interface IACCIONES
     {
+        List<auto> MostrarAuto();
+
     }
 }
