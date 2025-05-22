@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -70,12 +71,89 @@ namespace Gestión_de_CompraAutos
 
         public bool ExportarExcel()
         {
-            throw new NotImplementedException();
+            try
+            {
+                var rutaEscritorio = Environment.GetFolderPath(Environment.SpecialFolder.Desktop);
+                var rutaArchivo = Path.Combine(rutaEscritorio, "Autos_Exportado.xlsx");
+
+                using (var workbook = new XLWorkbook())
+                {
+                    var worksheet = workbook.Worksheets.Add("Sheet1");
+
+                    // Encabezados
+                    worksheet.Cell(1, 1).Value = "ID";
+                    worksheet.Cell(1, 2).Value = "Marca";
+                    worksheet.Cell(1, 3).Value = "Modelo";
+                    worksheet.Cell(1, 4).Value = "Año";
+                    worksheet.Cell(1, 5).Value = "Color";
+                    worksheet.Cell(1, 6).Value = "Precio";
+                    worksheet.Cell(1, 7).Value = "Estado";
+
+                    // Datos
+                    for (int i = 0; i < LISTAAUTOS.Count; i++)
+                    {
+                        var aut = LISTAAUTOS[i];
+                        worksheet.Cell(i + 2, 1).Value = aut.id;
+                        worksheet.Cell(i + 2, 2).Value = aut.marca;
+                        worksheet.Cell(i + 2, 3).Value = aut.modelo;
+                        worksheet.Cell(i + 2, 4).Value = aut.anio;
+                        worksheet.Cell(i + 2, 5).Value = aut.color;
+                        worksheet.Cell(i + 2, 6).Value = aut.precio;
+                        worksheet.Cell(i + 2, 7).Value = aut.estado;
+                    }
+
+                    workbook.SaveAs(rutaArchivo);
+                }
+
+                return true;
+            }
+            catch (Exception ex)
+            {
+                correo.EnviarCorreo(ex.ToString());
+                return false;
+            }
         }
 
         public bool ImportarExcel()
         {
-            throw new NotImplementedException();
+            try
+            {
+                var downloadsPath = Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.UserProfile), "Downloads");
+                var filePath = Path.Combine(downloadsPath, "Autos_Importacion.xlsx");
+
+                if (!File.Exists(filePath))
+                {
+                    return false;
+                }
+
+                using (var workbook = new XLWorkbook(filePath))
+                {
+                    var worksheet = workbook.Worksheet("Sheet1");
+                    var rows = worksheet.RowsUsed().Skip(1); // Saltar encabezado
+
+                    // Limpia la lista antes de importar por si lo quieres
+
+                    foreach (var row in rows)
+                    {
+                        int id = int.Parse(row.Cell(1).GetValue<string>());
+                        string marca = row.Cell(2).GetValue<string>();
+                        string modelo = row.Cell(3).GetValue<string>();
+                        int anio = int.Parse(row.Cell(4).GetValue<string>());
+                        string color = row.Cell(5).GetValue<string>();
+                        double precio = double.Parse(row.Cell(6).GetValue<string>());
+                        string estado = row.Cell(7).GetValue<string>();
+
+                        LISTAAUTOS.Add(new auto(id, marca, modelo, anio, color, precio, estado));
+                    }
+                }
+
+                return true;
+            }
+            catch (Exception ex)
+            {
+                correo.EnviarCorreo(ex.ToString());
+                return false;
+            }
         }
 
         public List<auto> MostrarAuto()
