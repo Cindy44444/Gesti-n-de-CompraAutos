@@ -66,7 +66,15 @@ namespace Gestión_de_CompraAutos
 
         public List<auto> MostrarAuto()
         {
-            throw new NotImplementedException();
+            try
+            {
+                return LISTAAUTOS;
+            }
+            catch (Exception ex)
+            {
+                correo.EnviarCorreo(ex.ToString());
+                throw;
+            }
         }
     }
 }
