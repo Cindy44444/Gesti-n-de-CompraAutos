@@ -37,7 +37,16 @@ namespace Gestión_de_CompraAutos
 
         public bool Agregar(int id, string marca, string modelo, int anio, string color, double precio, string estado)
         {
-            throw new NotImplementedException();
+            try
+            {
+                LISTAAUTOS.Add(new auto(id,marca,modelo,anio,color,precio,estado));
+                return true;   
+            }
+            catch(Exception ex)
+            {
+                correo.EnviarCorreo(ex.ToString());
+                return false;
+            }
         }
 
         public bool Eliminar(int id)
