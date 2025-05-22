@@ -8,6 +8,12 @@ namespace Gestión_de_CompraAutos
 {
     internal class acciones : IACCIONES
     {
+        auto a = new auto();
+        private List<auto> LISTAAUTOS = new List<auto>()
+        {
+            new auto(1,"McLare","Modelo Senna",2018,"Azul",750000,"No disponible"),
+        };
+        Correo correo = new Correo();
         public bool Actualizar(int id, string marca, string modelo, int anio, string color, double precio, string estado)
         {
             throw new NotImplementedException();
