@@ -22,5 +22,18 @@ namespace Gestión_de_CompraAutos
         {
             GVAutos.DataSource = ACC.MostrarAuto();
         }
+
+        private void btnExportar_Click(object sender, EventArgs e)
+        {
+            if(ACC.ExportarExcel())
+            {
+                MessageBox.Show("Exportando con exito fuaaaa.....");
+                GVAutos.DataSource = null;
+            }
+            else
+            {
+                MessageBox.Show("Fallo al exportar (Esta mal...en algo)");
+            }
+        }
     }
 }
