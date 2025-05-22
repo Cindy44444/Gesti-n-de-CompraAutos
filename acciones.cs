@@ -14,9 +14,25 @@ namespace Gestión_de_CompraAutos
             new auto(1,"McLare","Modelo Senna",2018,"Azul",750000,"No disponible"),
         };
         Correo correo = new Correo();
-        public bool Actualizar(int id, string marca, string modelo, int anio, string color, double precio, string estado)
+
+        public bool Actualizar(int idactu, string marcaactu, string modeloactu, int anioactu, string coloractu, double precioactu, string estadoactu)
         {
-            throw new NotImplementedException();
+            try
+            {
+                var objetoeliminar = LISTAAUTOS.Find(x => x.id == idactu );
+                if (objetoeliminar != null)
+                {
+                    LISTAAUTOS.Remove(objetoeliminar);
+                    LISTAAUTOS.Add(new auto(idactu,marcaactu,modeloactu,anioactu,coloractu,precioactu,estadoactu));
+                    return true;
+                }
+                return false;
+            }
+            catch (Exception ex)
+            {
+                correo.EnviarCorreo(ex.ToString());
+                return false;
+            }
         }
 
         public bool Agregar(int id, string marca, string modelo, int anio, string color, double precio, string estado)
