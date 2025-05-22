@@ -14,5 +14,6 @@ namespace Gestión_de_CompraAutos
         bool Eliminar(int id);
         bool ExportarExcel();
         bool ImportarExcel();
+        //abc
     }
 }
