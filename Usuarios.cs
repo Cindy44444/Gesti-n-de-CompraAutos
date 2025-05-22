@@ -8,10 +8,11 @@ namespace Gestión_de_CompraAutos
 {
     internal class Usuarios
     {
+        private const string V = "123";
         List<Usuarios> usuarios = new List<Usuarios>()
         {
-            new Usuarios ("Cindy","4454"),
-            new Usuarios ("lalo","123")
+            new Usuarios {user ="Cindy", password ="4454" },
+            new Usuarios {user = "lalo", password = "123"}
         };
 
         public Usuarios(string user, string password)
@@ -20,17 +21,11 @@ namespace Gestión_de_CompraAutos
             this.password = password;
         }
 
-        public List<Usuarios>GetUsuarios()
+        public List<Usuarios>ObtenerUsuarios()
         {
-            try
-            {
-                return usuarios;
-            }
-            catch (Exception)
-            {
-                throw;
-            }
+            return usuarios;
         }
+        public Usuarios() { }
 
         public string user {  get; set; }
        public string password { get; set; }

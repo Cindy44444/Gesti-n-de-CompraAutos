@@ -10,7 +10,7 @@ using System.Windows.Forms;
 
 namespace Gestión_de_CompraAutos
 {
-    public partial class Loggin : Form
+    public partial class Loggin: Form
     {
         public Loggin()
         {
@@ -30,6 +30,11 @@ namespace Gestión_de_CompraAutos
             {
                 MessageBox.Show("Fallaste jajajaja");
             }
+        }
+
+        private void txtUsuario_TextChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }
