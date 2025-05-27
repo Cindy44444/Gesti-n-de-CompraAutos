@@ -1,4 +1,5 @@
-﻿using ClosedXML.Excel;
+﻿
+using ClosedXML.Excel;
 using System;
 using System.Collections.Generic;
 using System.IO;
@@ -13,7 +14,7 @@ namespace Gestión_de_CompraAutos
         auto a = new auto();
         private List<auto> LISTAAUTOS = new List<auto>()
         {
-            new auto(1,"McLare","Modelo Senna",2018,"Azul",750000,"No disponible"),
+            new auto(1,"McLaren","Modelo Senna",2018,"Azul",750000,"No disponible"),
         };
         Correo correo = new Correo();
 

@@ -109,5 +109,15 @@ namespace Gestión_de_CompraAutos
             txtPrecio.Text = "";
             txtEstado.Text = "";
         }
+
+        private void btnTotalElementos_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnCostos_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

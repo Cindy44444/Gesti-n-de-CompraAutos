@@ -50,6 +50,8 @@
             this.btnLimpiar = new System.Windows.Forms.Button();
             this.btnExportar = new System.Windows.Forms.Button();
             this.btnImportar = new System.Windows.Forms.Button();
+            this.btnTotalElementos = new System.Windows.Forms.Button();
+            this.btnCostos = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.GVAutos)).BeginInit();
             this.SuspendLayout();
             // 
@@ -243,11 +245,33 @@
             this.btnImportar.UseVisualStyleBackColor = true;
             this.btnImportar.Click += new System.EventHandler(this.btnImportar_Click);
             // 
+            // btnTotalElementos
+            // 
+            this.btnTotalElementos.Location = new System.Drawing.Point(870, 456);
+            this.btnTotalElementos.Name = "btnTotalElementos";
+            this.btnTotalElementos.Size = new System.Drawing.Size(92, 38);
+            this.btnTotalElementos.TabIndex = 22;
+            this.btnTotalElementos.Text = "Total de elementos";
+            this.btnTotalElementos.UseVisualStyleBackColor = true;
+            this.btnTotalElementos.Click += new System.EventHandler(this.btnTotalElementos_Click);
+            // 
+            // btnCostos
+            // 
+            this.btnCostos.Location = new System.Drawing.Point(870, 510);
+            this.btnCostos.Name = "btnCostos";
+            this.btnCostos.Size = new System.Drawing.Size(92, 38);
+            this.btnCostos.TabIndex = 23;
+            this.btnCostos.Text = "Total suma de costo de todos los autos";
+            this.btnCostos.UseVisualStyleBackColor = true;
+            this.btnCostos.Click += new System.EventHandler(this.btnCostos_Click);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1486, 671);
+            this.ClientSize = new System.Drawing.Size(1444, 671);
+            this.Controls.Add(this.btnCostos);
+            this.Controls.Add(this.btnTotalElementos);
             this.Controls.Add(this.btnImportar);
             this.Controls.Add(this.btnExportar);
             this.Controls.Add(this.btnLimpiar);
@@ -302,6 +326,8 @@
         private System.Windows.Forms.Button btnLimpiar;
         private System.Windows.Forms.Button btnExportar;
         private System.Windows.Forms.Button btnImportar;
+        private System.Windows.Forms.Button btnTotalElementos;
+        private System.Windows.Forms.Button btnCostos;
     }
 }
 
