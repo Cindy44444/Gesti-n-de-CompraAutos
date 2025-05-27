@@ -8,8 +8,7 @@ namespace Gestión_de_CompraAutos
 {
     internal class Usuarios
     {
-        private const string V = "123";
-        List<Usuarios> usuarios = new List<Usuarios>()
+        private static List<Usuarios> usuarios = new List<Usuarios>
         {
             new Usuarios {user ="Cindy", password ="4454" }
         };
