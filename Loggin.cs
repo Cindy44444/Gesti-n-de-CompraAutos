@@ -34,7 +34,7 @@ namespace Gestión_de_CompraAutos
             }
             else
             {
-                MessageBox.Show("ERROR en algo");
+                MessageBox.Show("Esta mal.... en algo");
             }
         }
 
