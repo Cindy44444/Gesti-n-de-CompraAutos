@@ -12,6 +12,7 @@ namespace Gestión_de_CompraAutos
 {
     public partial class Loggin: Form
     {
+        Usuarios nose = new Usuarios();
         public Loggin()
         {
             InitializeComponent();
@@ -19,16 +20,21 @@ namespace Gestión_de_CompraAutos
 
         private void btnIngresar_Click(object sender, EventArgs e)
         {
-            Usuarios u = new Usuarios(txtUsuario.Text, txtContrasenia.Text);
-            if (true)
+
+            string user = txtUsuario.Text;
+            string Password = txtContrasenia.Text;
+
+            var lista = nose.ObtenerUsuarios();
+            var valida = lista.FirstOrDefault(u => u.user == user && u.password == Password);
+            if (valida != null)
             {
-                Form form = new Form();
-                form.Visible = false;
                 this.Hide();
+                Form1 inicio = new Form1();
+                inicio.Show();
             }
             else
             {
-                MessageBox.Show("Fallaste jajajaja");
+                MessageBox.Show("ERROR en algo");
             }
         }
 
