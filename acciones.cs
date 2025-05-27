@@ -75,7 +75,7 @@ namespace Gestión_de_CompraAutos
             try
             {
                 var rutaEscritorio = Environment.GetFolderPath(Environment.SpecialFolder.Desktop);
-                var rutaArchivo = Path.Combine(rutaEscritorio, "Autos_Exportado.xlsx");
+                var rutaArchivo = Path.Combine(rutaEscritorio, "Autoeseyaenelexcel.xlsx");
 
                 using (var workbook = new XLWorkbook())
                 {
@@ -120,7 +120,7 @@ namespace Gestión_de_CompraAutos
             try
             {
                 var downloadsPath = Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.UserProfile), "Downloads");
-                var filePath = Path.Combine(downloadsPath, "Autos_Importacion.xlsx");
+                var filePath = Path.Combine(downloadsPath, "Autoeseimportado.xlsx");
 
                 if (!File.Exists(filePath))
                 {
