@@ -11,8 +11,7 @@ namespace Gestión_de_CompraAutos
         private const string V = "123";
         List<Usuarios> usuarios = new List<Usuarios>()
         {
-            new Usuarios {user ="Cindy", password ="4454" },
-            new Usuarios {user = "lalo", password = "123"}
+            new Usuarios {user ="Cindy", password ="4454" }
         };
 
         public Usuarios(string user, string password)
