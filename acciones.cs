@@ -120,7 +120,7 @@ namespace Gestión_de_CompraAutos
             try
             {
                 var downloadsPath = Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.UserProfile), "Downloads");
-                var filePath = Path.Combine(downloadsPath, "Autoeseimportado.xlsx");
+                var filePath = Path.Combine(downloadsPath, "Autos_Importacion.xlsx");
 
                 if (!File.Exists(filePath))
                 {
