@@ -189,6 +189,7 @@ namespace Gestión_de_CompraAutos
             }
 
             throw new NotImplementedException();
+            //ahhhhhhhh
         }
 
         public int totalelementos(int id3, string marca3, string modelo3, int anio3, string color3, double precio3, string estado3)
