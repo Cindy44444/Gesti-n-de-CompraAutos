@@ -117,6 +117,8 @@ namespace Gestión_de_CompraAutos
 
         private void btnCostos_Click(object sender, EventArgs e)
         {
+            double precio = Convert.ToDouble(txtPrecio.Text);
+            GVAutos.DataSource = ACC.Preciototal(precio);
 
         }
     }

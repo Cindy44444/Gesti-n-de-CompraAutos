@@ -1,11 +1,11 @@
-﻿
-using ClosedXML.Excel;
+﻿using ClosedXML.Excel;
 using System;
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows.Forms;
 
 namespace Gestión_de_CompraAutos
 {
@@ -169,6 +169,45 @@ namespace Gestión_de_CompraAutos
                 correo.EnviarCorreo(ex.ToString());
                 throw;
             }
+        }
+
+        public int Preciototal(double precio)
+        {
+            try
+            {
+                double sumaprecio = 0;
+                foreach (var S in LISTAAUTOS)
+                {
+                    sumaprecio = sumaprecio + S.precio;
+                }
+                MessageBox.Show("La suma total es de:");
+            }
+            catch (Exception ex)
+            {
+                correo.EnviarCorreo(ex.ToString());
+                throw;
+            }
+
+            throw new NotImplementedException();
+        }
+
+        public int totalelementos(int id3, string marca3, string modelo3, int anio3, string color3, double precio3, string estado3)
+        {
+            try
+            {
+                double totalelementos = 0;
+                foreach (var S in LISTAAUTOS)
+                {
+                    totalelementos = totalelementos + S.precio;
+                }
+                MessageBox.Show("El total de elementos es de:");
+            }
+            catch (Exception ex)
+            {
+                correo.EnviarCorreo(ex.ToString());
+                throw;
+            }
+            throw new NotImplementedException();
         }
     }
 }

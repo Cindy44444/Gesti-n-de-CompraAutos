@@ -259,7 +259,7 @@
             // 
             this.btnCostos.Location = new System.Drawing.Point(870, 510);
             this.btnCostos.Name = "btnCostos";
-            this.btnCostos.Size = new System.Drawing.Size(92, 38);
+            this.btnCostos.Size = new System.Drawing.Size(92, 53);
             this.btnCostos.TabIndex = 23;
             this.btnCostos.Text = "Total suma de costo de todos los autos";
             this.btnCostos.UseVisualStyleBackColor = true;
